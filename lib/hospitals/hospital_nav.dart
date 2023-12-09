@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medapp/TeleMedicine/h_telemedicine.dart';
 import 'package:medapp/hospitals/add_doctors.dart';
 import 'package:medapp/hospitals/approve_booking.dart';
 import 'package:medapp/hospitals/edit_hospital.dart';
@@ -116,6 +117,16 @@ Widget buildMenuItems(BuildContext context) {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (context) => const ViewDoctors()),
+            );
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.medical_services, color: Colors.black),
+          title: const Text("Approve Request",
+              style: TextStyle(color: Colors.black)),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const HTeleMedicine()),
             );
           },
         ),

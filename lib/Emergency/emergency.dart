@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:medapp/screens/home_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../Navigation/menu.dart';
-import '../admin/admin_home.dart';
 
 class EmergencyPage extends StatefulWidget {
   const EmergencyPage({Key? key}) : super(key: key);
@@ -31,7 +31,7 @@ class _EmergencyPageState extends State<EmergencyPage> {
           IconButton(
             onPressed: () {
               Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const AdminHome()),
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
               );
             },
             icon: const Icon(Icons.home, color: Colors.white),
@@ -70,13 +70,38 @@ class EmergencyContactsList extends StatelessWidget {
           itemCount: hospitals.length,
           itemBuilder: (context, index) {
             final hospital = hospitals[index];
-            return ListTile(
-              title: Text(hospital['name'] ?? ''),
-              subtitle: Text(hospital['contact'] ?? ''),
-              onTap: () {
-                _callHospital(hospital['contact']);
-              },
-              // Add more styling or functionality as needed
+
+            return Card(
+              color: Colors.lightBlue, // Set the background color of the Card
+              elevation: 4.0,
+              margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+              child: ListTile(
+                tileColor: Colors.blueAccent, // Set the background color of the ListTile
+                contentPadding: const EdgeInsets.all(16.0),
+                title: Text(
+                  hospital['name'] ?? '',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white, // Set the text color
+                  ),
+                ),
+                subtitle: Text(
+                  hospital['contact'] ?? '',
+                  style: const TextStyle(
+                    fontSize: 14.0,
+                    color: Colors.white, // Set the text color
+                  ),
+                ),
+                onTap: () {
+                  _callHospital(hospital['contact']);
+                },
+                trailing: Icon(
+                  Icons.phone,
+                  color: Colors.white, // Set the icon color
+                ),
+                // Add more styling or functionality as needed
+              ),
             );
           },
         );

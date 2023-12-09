@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medapp/TeleMedicine/admin_telemedicine.dart';
 import 'package:medapp/admin/add_doctors.dart';
 import 'package:medapp/admin/add_hospitals.dart';
 import 'package:medapp/admin/admin_chat.dart';
@@ -110,6 +111,16 @@ Widget buildMenuItems(BuildContext context) {
           },
         ),
         ListTile(
+          leading: const Icon(Icons.medical_services, color: Colors.black),
+          title: const Text("Add Medicines",
+              style: TextStyle(color: Colors.black)),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const ATeleMedicine()),
+            );
+          },
+        ),
+        ListTile(
           leading: const Icon(Icons.verified_user, color: Colors.black),
           title: const Text("All Users", style: TextStyle(color: Colors.black)),
           onTap: () {
@@ -139,7 +150,7 @@ Widget buildMenuItems(BuildContext context) {
           thickness: 0.5,
           color: Colors.black,
         ),
-        
+
         const Padding(
           padding: EdgeInsets.only(top: 10),
           child: Center(child: Text("TEAM CAREMATES")),

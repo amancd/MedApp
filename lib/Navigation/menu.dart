@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medapp/ChatSystem/chat.dart';
 import 'package:medapp/Emergency/emergency.dart';
+import 'package:medapp/TeleMedicine/telemedicine.dart';
 import 'package:medapp/booking/meeting.dart';
 import 'package:medapp/booking/viewbooking.dart';
 import 'package:medapp/hospitals/all_hospitals.dart';
@@ -8,6 +9,7 @@ import 'package:medapp/pages/disclaimer.dart';
 import 'package:medapp/pages/feedbacks.dart';
 import 'package:medapp/screens/home_screen.dart';
 
+import '../TeleMedicine/h_telemedicine.dart';
 import '../pages/about.dart';
 import '../pages/privacy.dart';
 
@@ -178,11 +180,20 @@ Widget buildMenuItems(BuildContext context) {
           },
         ),
         ListTile(
+          leading: const Icon(Icons.medical_services, color: Colors.black),
+          title: const Text("TeleMedicine", style: TextStyle(color: Colors.black)),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => HTeleMedicine()),
+            );
+          },
+        ),
+        ListTile(
           leading: const Icon(Icons.chat, color: Colors.black),
           title: const Text("Chat With Ved", style: TextStyle(color: Colors.black)),
           onTap: () {
             Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const UserChatApp()),
+              MaterialPageRoute(builder: (context) => UserChatApp()),
             );
           },
         ),

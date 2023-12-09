@@ -48,6 +48,9 @@ dependencies:
   share_plus: ^7.0.2
   url_launcher: ^6.2.1
   uuid: ^3.0.0
+  dialog_flowtter: ^0.3.3
+  file_picker: ^6.1.1
+
 
 dev_dependencies:
   flutter_test:

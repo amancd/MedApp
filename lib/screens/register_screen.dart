@@ -35,7 +35,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 35),

@@ -7,6 +7,7 @@ import 'package:medapp/widgets/custom_button.dart';
 import 'package:provider/provider.dart';
 
 import '../admin/signform.dart';
+import '../pharma/pharma_login.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -21,7 +22,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     final ap = Provider.of<AuthProvider>(context, listen: false);
 
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 35),
@@ -77,6 +78,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ],
                 ),
                 const SizedBox(height: 30,),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignInPage(),
+                      ),
+                    );
+                  },
+                  child: const Text("Admin Login"),
+                ),
                 SizedBox(
                   width: double.infinity,
                   height: 50,
@@ -108,11 +120,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SignInPage(),
+                        builder: (context) => PSignInPage(),
                       ),
                     );
                   },
-                  child: const Text("Admin Login"),
+                  child: const Text("Pharma Login"),
                 ),
               ],
             ),
