@@ -7,6 +7,8 @@ import 'package:medapp/hospitals/hospital_home.dart';
 import 'package:medapp/hospitals/request_admin.dart';
 import 'package:medapp/hospitals/viewdoctors.dart';
 
+import '../healthrecords/hospitalhealthrecords.dart';
+
 class HNav extends StatelessWidget {
   const HNav({Key? key}) : super(key: key);
 
@@ -43,7 +45,7 @@ Widget buildHeader(BuildContext context) {
               backgroundImage: AssetImage("assets/logo.jpg"),
             ),
             Text(
-              'HIMS',
+              'HIMS Hospital',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 21,
@@ -87,6 +89,16 @@ Widget buildMenuItems(BuildContext context) {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(builder: (context) => const ApproveBookings()),
+            );
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.upload, color: Colors.black),
+          title: const Text("Upload Health Reports",
+              style: TextStyle(color: Colors.black)),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const HUploadDocs()),
             );
           },
         ),

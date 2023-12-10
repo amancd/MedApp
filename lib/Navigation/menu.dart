@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:medapp/ChatSystem/chat.dart';
 import 'package:medapp/Emergency/emergency.dart';
-import 'package:medapp/TeleMedicine/telemedicine.dart';
+import 'package:medapp/IoMT.dart';
 import 'package:medapp/booking/meeting.dart';
 import 'package:medapp/booking/viewbooking.dart';
+import 'package:medapp/healthrecords/userhealthrecords.dart';
 import 'package:medapp/hospitals/all_hospitals.dart';
 import 'package:medapp/pages/disclaimer.dart';
 import 'package:medapp/pages/feedbacks.dart';
@@ -118,7 +119,7 @@ Widget buildMenuItems(BuildContext context) {
               style: TextStyle(color: Colors.black)),
           onTap: () {
             Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
+              MaterialPageRoute(builder: (context) => const UserRecords()),
             );
           },
         ),
@@ -175,7 +176,7 @@ Widget buildMenuItems(BuildContext context) {
           title: const Text("IoMT", style: TextStyle(color: Colors.black)),
           onTap: () {
             Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
+              MaterialPageRoute(builder: (context) => const IOMT()),
             );
           },
         ),
