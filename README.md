@@ -29,6 +29,3 @@ Pharma Dashboard
 - Prescription
 
 Additionally we can implement Insurance Feature also.
-
-## Getting Started
-
