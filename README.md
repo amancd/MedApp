@@ -14,7 +14,7 @@ An AI Integrated Chat App to help rural people get Health Care facilities online
 Hospital Dashboard
 - Accept or Reject Bookings
 - Upload E-Health Records
-- Fetcn Patient Details
+- Fetch Patient Details
 - Edit Information About Hospital
 
 Admin Dashboard
