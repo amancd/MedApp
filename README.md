@@ -1,16 +1,34 @@
 # medapp
 
-A new Flutter project.
+
+An AI Integrated Chat App to help rural people get Health Care facilities online. This app have features like:
+- IOMT
+- Book Appointment
+- View Bookings
+- Order Medicine
+- Track Order
+- E-Health Record
+- Emergency
+- Chat With Ved
+
+Hospital Dashboard
+- Accept or Reject Bookings
+- Upload E-Health Records
+- Fetcn Patient Details
+- Edit Information About Hospital
+
+Admin Dashboard
+- All Bookings
+- All Users
+- All Hospitals
+- Add Hospital
+
+Pharma Dashboard
+- Accept or Reject Orders
+- Track Orders
+- Prescription
+
+Additionally we can implement Insurance Feature also.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
